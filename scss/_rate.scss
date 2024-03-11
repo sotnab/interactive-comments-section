@@ -1,0 +1,23 @@
+.rate {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: $very-light-gray;
+    border-radius: 10px;
+}
+
+.rate__btn {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 14px 16px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.rate__number {
+    font-weight: 500;
+    color: $moderate-blue;
+}

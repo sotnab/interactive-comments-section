@@ -1,0 +1,36 @@
+.new-comment {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    row-gap: 16px;
+    padding: 16px;
+    background-color: $white;
+    border-radius: 6px;
+}
+
+.new-comment__text {
+    grid-column-end: span 2;
+    border: 1px solid $light-gray;
+    border-radius: 6px;
+    font-size: $font-size;
+    font-family: $font-family;
+    padding: 16px 24px;
+}
+
+.new-comment__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.new-comment__btn {
+    padding: 16px 32px;
+    background-color: $moderate-blue;
+    color: $very-light-gray;
+    font-size: $font-size;
+    font-weight: 500;
+    font-family: $font-family;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+}

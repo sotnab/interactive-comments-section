@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive comments section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <script src="js/index.js" defer></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="content">
+      <section class="comments">
+
+        <div class="comment">
+          <div class="comment__bar">
+            <img src="images/avatars/image-maxblagun.png" alt="maxblagun avatar" class="comment__avatar">
+            <div class="comment__username">maxblagun</div>
+            <div class="comment__time">2 weeks ago</div>
+          </div>
+
+          <div class="comment__text">
+            Impressive! Though it seems the drag
+            feature could be improved. But overall it
+            looks incredible. You've nailed the design
+            and the responsiveness at various
+            breakpoints work really well.
+          </div>
+
+          <div class="rate">
+            <button class="rate__btn">
+              <img class="rate__icon" src="images/icon-plus.svg" alt="Plus">
+            </button>
+
+            <span class="rate__number">5</span>
+
+            <button class="rate__btn">
+              <img class="rate__icon" src="images/icon-minus.svg" alt="Minus">
+            </button>
+          </div>
+
+          <div class="comment__actions">
+            <button class="comment__action">
+              <img src="images/icon-reply.svg" alt="Reply" class="comment__reply-icon">
+              Reply
+            </button>
+          </div>
+        </div>
+
+        <div class="comment-replies">
+          <div class="comment">
+            <div class="comment__bar">
+              <img src="images/avatars/image-maxblagun.png" alt="maxblagun avatar" class="comment__avatar">
+              <div class="comment__username">ramsesmiron</div>
+              <div class="comment__time">1 week ago</div>
+            </div>
+
+            <div class="comment__text">
+              <button class="comment__mention">@maxblagun</button> If you're still new, I'd
+              recommend focusing on the
+              fundamentals of HTML, CSS and JS
+              before considering React. It's very
+              tempting to jump ahead but lay a solid
+              foundation first.
+            </div>
+
+            <div class="rate">
+              <button class="rate__btn">
+                <img class="rate__icon" src="images/icon-plus.svg" alt="Plus">
+              </button>
+
+              <span class="rate__number">5</span>
+
+              <button class="rate__btn">
+                <img class="rate__icon" src="images/icon-minus.svg" alt="Minus">
+              </button>
+            </div>
+
+            <div class="comment__actions">
+              <button class="comment__action">
+                <img src="images/icon-reply.svg" alt="Reply" class="comment__reply-icon">
+                Reply
+              </button>
+            </div>
+          </div>
+
+          <div class="comment">
+            <div class="comment__bar">
+              <img src="images/avatars/image-juliusomo.png" alt="juliusomo avatar" class="comment__avatar">
+              <div class="comment__username">
+                juliusomo
+                <div class="comment__badge">you</div>
+              </div>
+              <div class="comment__time">2 days ago</div>
+            </div>
+
+            <div class="comment__text">
+              <button class="comment__mention">@ramsesmiron</button> I couldn't agree more
+              with this. Everything moves so fast
+              and it always seems like everyone
+              knows the newest library/framework.
+              But the fundamentals are what stay
+              constant.
+            </div>
+
+            <div class="rate">
+              <button class="rate__btn">
+                <img class="rate__icon" src="images/icon-plus.svg" alt="Plus">
+              </button>
+
+              <span class="rate__number">2</span>
+
+              <button class="rate__btn">
+                <img class="rate__icon" src="images/icon-minus.svg" alt="Minus">
+              </button>
+            </div>
+
+            <div class="comment__actions">
+              <button class="comment__action comment__action--delete">
+                <img src="images/icon-delete.svg" alt="Delete" class="comment__action-icon">
+                Delete
+              </button>
+
+              <button class="comment__action">
+                <img src="images/icon-edit.svg" alt="Edit" class="comment__action-icon">
+                Edit
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <form class="new-comment">
+          <textarea class="new-comment__text" cols="30" rows="20" placeholder="Add a comment..."></textarea>
+          <img src="images/avatars/image-juliusomo.png" alt="juliusomo" class="new-comment__avatar">
+          <button class="new-comment__btn">Send</button>
+        </form>
+
+      </section>
+    </div>
+  </div>
+
+</body>
+
+</html>

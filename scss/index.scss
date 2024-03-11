@@ -1,0 +1,31 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: $very-light-gray;
+}
+
+.comments {
+    padding: 24px 12px;
+}
+
+.comment-replies {
+    margin-top: 16px;
+    padding-left: 16px;
+    border-left: 2px solid $light-gray;
+}
+
+@import 'comment';
+@import 'rate';
+@import 'new-comment';

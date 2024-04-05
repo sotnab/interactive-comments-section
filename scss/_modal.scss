@@ -1,0 +1,41 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: $black-40;
+    padding: 16px;
+
+    &--visible {
+        display: flex;
+    }
+}
+
+.modal__content {
+    display: grid;
+    gap: 16px;
+    padding: 24px;
+    background-color: $white;
+    border-radius: 8px;
+}
+
+.modal__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.modal__title {
+    font-size: 1.3rem;
+    color: $dark-blue;
+    font-weight: 500;
+}
+
+.modal__text {
+   color: $grayish-blue;
+   line-height: 1.5;
+}

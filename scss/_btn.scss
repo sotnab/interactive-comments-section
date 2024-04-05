@@ -1,0 +1,29 @@
+.btn {
+    min-width: 110px;
+    padding: 16px;
+    background-color: $moderate-blue;
+    color: $very-light-gray;
+    font-size: $font-size;
+    font-weight: 500;
+    font-family: $font-family;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: opacity 100ms;
+
+    &--gray {
+        background-color: $grayish-blue;
+    }
+
+    &--red {
+        background-color: $soft-red;
+    }
+
+    @media (min-width: $breakpoint) {
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

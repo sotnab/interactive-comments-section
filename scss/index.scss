@@ -17,15 +17,26 @@ body {
 }
 
 .comments {
+    width: 100%;
+    max-width: $breakpoint;
     padding: 24px 12px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .comment-replies {
     margin-top: 16px;
     padding-left: 16px;
     border-left: 2px solid $light-gray;
+
+    @media (min-width: $breakpoint) {
+        padding-left: 42px;
+        margin-left: 42px;
+    }
 }
 
 @import 'comment';
 @import 'rate';
 @import 'new-comment';
+@import 'modal';
+@import 'btn';

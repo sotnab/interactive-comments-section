@@ -4,17 +4,30 @@
     width: fit-content;
     background-color: $very-light-gray;
     border-radius: 10px;
+
+    @media (min-width: $breakpoint) {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
 .rate__btn {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 14px 16px;
+    padding: 14px;
     background-color: transparent;
+    color: $light-grayish-blue;
     border: none;
     outline: none;
     cursor: pointer;
+    transition: filter 200ms;
+    
+    @media (min-width: $breakpoint) {
+        &:hover {
+            filter: brightness(0.5);
+        }
+    }
 }
 
 .rate__number {

@@ -12,10 +12,10 @@ class CommentAbstract {
         this.setRated = setRated
 
         this.element = document.createElement('div')
+        // rated is needed to hold user rate and prevent infinite rating
         this.rated = this.data.rated || 0
+        // editing is used to determine if comment is in editing state
         this.editing = false
-
-        console.log(this.data.rated)
 
         this.element.classList.add('comment')
         this.element.innerHTML = commentContentTemplate
@@ -77,6 +77,7 @@ class CommentAbstract {
         this.data.score += userRate
         this.rated = userRate
 
+        // store rated in upper level to prevent infinite rating
         this.setRated(this.data.id, userRate)
 
         this.reloadData()
@@ -96,7 +97,6 @@ class CommentAbstract {
         if(this.editing) return
 
         this.editing = true
-
         const content = this.element.querySelector('.comment__text')
         content.classList.add('comment__text--hidden')
 

@@ -17,26 +17,49 @@ body {
 }
 
 .comments {
+    display: grid;
+    gap: 16px;
     width: 100%;
     max-width: $breakpoint;
     padding: 24px 12px;
     margin-left: auto;
     margin-right: auto;
+    
+    @media (min-width: $breakpoint) {
+        gap: 20px;
+    }
 }
 
 .comment-replies {
-    margin-top: 16px;
+    position: relative;
+    display: grid;
+    gap: 16px;
     padding-left: 16px;
-    border-left: 2px solid $light-gray;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        bottom: 10px;
+        width: 2px;
+        background-color: $light-gray;
+    }
+
+    &:empty {
+        display: none;
+    }
 
     @media (min-width: $breakpoint) {
         padding-left: 42px;
         margin-left: 42px;
+        gap: 20px;
     }
 }
 
 @import 'comment';
 @import 'rate';
 @import 'new-comment';
-@import 'modal';
+@import 'dialog';
 @import 'btn';

@@ -1,9 +1,19 @@
 import CommentAbstract from './CommentAbstract.js';
 
 class CommentReply extends CommentAbstract {
-    constructor(data, currentUser) {
-        super(data, currentUser)
+    constructor(data, currentUser, cleanup, setReplyingToId, editContent, setRated, parentData) {
+        super(data, currentUser, cleanup, editContent, setReplyingToId, setRated)
+        
+        this.parentData = parentData
+        this.editContent = editContent
         this.setReplyingTo()
+    }
+
+    render(parent) {
+        const reply = this.element.querySelector('.comment__action--reply')
+        reply.addEventListener('click', () => this.setReplyingToId(this.data.id, this.parentData.id))
+        
+        super.render(parent)
     }
 
     setReplyingTo() {

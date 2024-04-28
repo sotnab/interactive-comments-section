@@ -4,7 +4,6 @@
    padding: 12px;
    background-color: $white;
    border-radius: 6px;
-   margin-bottom: 16px;
    grid-template:
       'bar bar'
       'text text'
@@ -16,7 +15,6 @@
          'rate text text'
          'rate text text' / auto 1fr;
       padding: 24px;
-      margin-bottom: 24px;
    }
 }
 
@@ -47,8 +45,31 @@
 
 .comment__text {
    grid-area: text;
+   display: block;
    color: $grayish-blue;
    line-height: 1.5;
+
+   &--hidden {
+      display: none;
+   }
+}
+
+.comment__edit-text {
+   grid-area: text;
+   display: block;
+   padding: 16px 24px;
+   color: $grayish-blue;
+   border: 1px solid $light-gray;
+   line-height: 1.5;
+   border-radius: 6px;
+   font-size: $font-size;
+   font-family: $font-family;
+   resize: none;
+   overflow: hidden;
+
+   @media (min-width: $breakpoint) {
+      cursor: pointer;
+   }
 }
 
 .comment__rate {
@@ -118,4 +139,12 @@
    color: $very-light-gray;
    line-height: 1;
    font-size: 0.75rem;
+}
+
+.comment__update-btn {
+   grid-column: 2;
+   
+   @media (min-width: $breakpoint) {
+      grid-column: 3;
+   }
 }

@@ -6,6 +6,7 @@
     padding: 16px;
     background-color: $white;
     border-radius: 6px;
+    order: 2;
     
     @media (min-width: $breakpoint) {
         display: flex;

@@ -5,17 +5,20 @@ class Comment extends CommentAbstract {
     render(parent) {
         super.render(parent)
 
+        this.replies = document.createElement('div')
+        this.replies.classList.add('comment-replies')
+
         if (this.data.replies.length) {
-            const replies = document.createElement('div')
-            replies.classList.add('comment-replies')
-
             this.data.replies.forEach((item) => {
-                const newReply = new CommentReply(item, this.currentUser)
-                newReply.render(replies)
+                const newReply = new CommentReply(item, this.currentUser, this.cleanup, this.setReplyingToId, this.editContent, this.setRated, this.data)
+                newReply.render(this.replies)
             })
-
-            parent.appendChild(replies)
         }
+
+        parent.appendChild(this.replies)
+
+        const reply = this.element.querySelector('.comment__action--reply')
+        reply.addEventListener('click', () => this.setReplyingToId(this.data.id))
     }
 }
 

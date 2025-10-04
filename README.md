@@ -5,8 +5,7 @@
 ## Welcome!
 
 Here is my solution to Interactive comments section challenge from Frontend Mentor
-I made it without any framework so code is little bit confusing but that is 
-important it just works.
+I made it without any framework so code is a little bit confusing.
 
 ## Stack
 
